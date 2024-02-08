@@ -178,6 +178,18 @@ function display(data) {
     `;
 }
 
-console.log(display(finances));
+const displayElement = document.querySelector("#display");
 
-// console.log(averageChange(transformData(finances)));
+function render(text) {
+    const splittext = text
+        .split("\n")
+        .map((portion) => portion.trim())
+        .filter((item) => item !== "")
+        .map((item) => `<p>${item}</p>`)
+        .join("");
+
+    return splittext;
+}
+
+displayElement.innerHTML = render(display(finances));
+console.log(display(finances));
