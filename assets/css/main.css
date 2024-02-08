@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.display{
+    display: block;
+    background-color: aqua;
+    border: 1px solid;
+}
